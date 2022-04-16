@@ -8,6 +8,11 @@ from sklearn.cluster import KMeans
 
 sns.set_style('white')
 
+'''
+基于提取区域的像素值的取值特性进行ROI区域提取
+'''
+
+
 img_QR = cv2.imread('./3.png')
 img_QR = cv2.cvtColor(img_QR, cv2.COLOR_BGR2GRAY)
 
@@ -41,7 +46,6 @@ ax3 = fig.add_subplot(133)
 
 ax1.imshow(img_jizhiQR)
 ax2.imshow(img_jizhiQR_new)
-ax3.imshow(np_25_counts_tf)
 
 
 # 直接采样
